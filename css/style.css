@@ -55,3 +55,26 @@ button {
   background: #121212;
   color: white;
 }
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+#successMsg {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
