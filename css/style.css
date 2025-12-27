@@ -3,6 +3,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.nav-links a.active {
+  border-bottom: 2px solid #fff;
+}
+
 
 nav {
   background: #003366;
