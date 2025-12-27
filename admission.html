@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Admission</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Student Admission Form</h2>
+
+<form id="admissionForm">
+    <input type="text" id="name" placeholder="Full Name">
+    <small class="error" id="nameErr"></small>
+
+    <input type="email" id="email" placeholder="Email">
+    <small class="error" id="emailErr"></small>
+
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <small class="error" id="mobileErr"></small>
+
+    <select id="course">
+        <option value="">Select Course</option>
+        <option>BCA</option>
+        <option>MCA</option>
+        <option>B.Tech</option>
+        <option>MBA</option>
+    </select>
+    <small class="error" id="courseErr"></small>
+
+    <textarea id="address" placeholder="Address"></textarea>
+    <small class="error" id="addressErr"></small>
+
+    <button type="submit">Submit Application</button>
+</form>
+
+<p id="successMsg"></p>
+
+<script src="js/admission.js"></script>
+</body>
+</html>
