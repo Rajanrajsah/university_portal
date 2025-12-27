@@ -114,7 +114,7 @@ In real-world applications, authentication should be handled using **backend + d
 
 ## 🌐 Live Demo
 
-https://your-username.github.io/university_portal
+https://your-username.github.io/university_portal/index.html
 
 ---
 
