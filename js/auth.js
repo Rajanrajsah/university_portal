@@ -4,15 +4,20 @@ const users = [
 ];
 
 function login() {
-  let u = document.getElementById("username").value;
-  let p = document.getElementById("password").value;
+    const role = document.getElementById("role").value;
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const error = document.getElementById("loginError");
 
-  let user = users.find(x => x.username === u && x.password === p);
-
-  if (user) {
-    localStorage.setItem("user", JSON.stringify(user));
-    window.location.href = "dashboard.html";
-  } else {
-    document.getElementById("msg").innerText = "Invalid Credentials";
-  }
+    if (role === "admin" && user === "admin" && pass === "admin123") {
+        localStorage.setItem("role", "admin");
+        window.location.href = "dashboard.html";
+    } 
+    else if (role === "staff" && user === "staff" && pass === "staff123") {
+        localStorage.setItem("role", "staff");
+        window.location.href = "dashboard.html";
+    } 
+    else {
+        error.innerText = "Invalid credentials";
+    }
 }
