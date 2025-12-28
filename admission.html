@@ -9,39 +9,29 @@
 </head>
 <body>
 
-
 <section class="section">
-<h2>Student Admission Form</h2>
+<h2>Admission Form</h2>
 
 <form id="admissionForm">
-    <input type="text" id="name" placeholder="Full Name">
-    <small class="error" id="nameErr"></small>
-
-    <input type="email" id="email" placeholder="Email">
-    <small class="error" id="emailErr"></small>
-
-    <input type="text" id="mobile" placeholder="Mobile Number">
-    <small class="error" id="mobileErr"></small>
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="number" id="phone" placeholder="Phone Number" required>
 
     <select id="course">
-        <option value="">Select Course</option>
         <option>BCA</option>
         <option>MCA</option>
         <option>B.Tech</option>
         <option>MBA</option>
     </select>
-    <small class="error" id="courseErr"></small>
 
-    <textarea id="address" placeholder="Address"></textarea>
-    <small class="error" id="addressErr"></small>
-
-    <button type="submit">Submit Application</button>
+    <button type="submit">Submit</button>
 </form>
 
-<p id="successMsg"></p>
+<p id="msg"></p>
+</section>
 
 <script src="js/admission.js"></script>
-</section>
+    
 
 <footer>© 2025 ABC University</footer>
 <script src="js/main.js"></script>
