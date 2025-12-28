@@ -377,3 +377,9 @@ input:focus, textarea:focus {
         transform: translateY(0);
     }
 }
+
+.active-link {
+    background: rgba(255,255,255,0.3);
+    font-weight: bold;
+}
+
