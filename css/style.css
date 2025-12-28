@@ -155,17 +155,28 @@ select {
     }
 }
 .vichar-box {
-    margin: 30px auto;
+    max-width: 650px;
+    margin: 20px auto;
     padding: 20px;
-    max-width: 600px;
-    font-size: 20px;
+    font-size: 22px;
     background: #f4f4f4;
-    border-left: 5px solid #0b4ea2;
+    border-left: 6px solid #0b4ea2;
     border-radius: 6px;
 }
+
+textarea {
+    width: 100%;
+    min-height: 80px;
+    margin-top: 10px;
+}
+
+.btn-group button {
+    margin: 10px 5px;
+}
+
 .dark-mode .vichar-box {
     background: #1e1e1e;
-    color: #fff;
+    color: white;
 }
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
