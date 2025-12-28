@@ -6,27 +6,19 @@ btn.onclick = () => {
     box.style.display = box.style.display === "flex" ? "none" : "flex";
 };
 
-function respondAI() {
+async function respondAI() {
     const input = document.getElementById("aiInput");
-    const question = input.value.toLowerCase();
-    if (!question) return;
+    const msg = input.value;
+    addMsg("You", msg);
 
-    addMsg("You", input.value);
+    const res = await fetch("http://localhost:3000/ask-ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: msg })
+    });
 
-    let answer = "Sorry, I am learning. Please contact admin.";
-
-    if (question.includes("course"))
-        answer = "We offer BCA, MCA, B.Tech, and MBA programs.";
-    else if (question.includes("admission"))
-        answer = "You can apply through the Admission page.";
-    else if (question.includes("login"))
-        answer = "Admin and staff can login using the Login page.";
-    else if (question.includes("vichar"))
-        answer = "You can view motivational thoughts on Achhi Vichar page.";
-    else if (question.includes("contact"))
-        answer = "You can contact us via the Contact page.";
-
-    setTimeout(() => addMsg("AI", answer), 500);
+    const data = await res.json();
+    addMsg("AI", data.reply);
     input.value = "";
 }
 
