@@ -6,30 +6,24 @@
 </head>
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="logo">ABC University</div>
 
-    <!-- Hamburger -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="login-box">
+    <h2>Admin / Staff Login</h2>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="admission.html">Admission</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html" class="admin-login">Admin / Staff Login</a></li>
-    </ul>
-</nav>
-<h2>Login</h2>
+    <select id="role">
+        <option value="admin">Admin</option>
+        <option value="staff">Staff</option>
+    </select>
 
-<input id="username" placeholder="Username">
-<input id="password" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
 
+    <button onclick="login()">Login</button>
+    <p id="loginError"></p>
+</div>
 <p id="msg"></p>
 
 <script src="js/auth.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 </html>
