@@ -30,17 +30,22 @@
 <section class="section">
     <h2>🌸 Achhi Vichar</h2>
 
-    <div class="vichar-box" id="vicharText">
-        Loading...
+    <div class="vichar-box" id="vicharText"></div>
+
+    <div class="btn-group">
+        <button onclick="showNewVichar()">Next</button>
+        <button onclick="toggleLanguage()">Hindi / English</button>
     </div>
 
-    <button onclick="showNewVichar()">Next Vichar</button>
+    <hr>
+
+    <h3>➕ Add New Vichar (Admin)</h3>
+    <textarea id="newVichar" placeholder="Write new vichar here..."></textarea>
+    <button onclick="addVichar()">Add</button>
+
+    <p id="msg"></p>
 </section>
 
 <script src="js/achhi_vichar.js"></script>
-    
-<footer>© 2025 ABC University</footer>
-    <script src="js/main.js"></script>
 </body>
 </html>
-
