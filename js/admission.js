@@ -15,3 +15,8 @@ document.getElementById("admissionForm").addEventListener("submit", function (e)
     document.getElementById("msg").innerText = "Application submitted successfully!";
     this.reset();
 });
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("msg").innerText = 
+        "Application submitted successfully!";
+});
