@@ -50,6 +50,19 @@
 <section class="section fade-in">
     <!-- page content -->
 </section>
+    <!-- AI Agent Button -->
+<div id="aiAgentBtn">🤖</div>
+
+<!-- AI Agent Chat Box -->
+<div id="aiAgentBox">
+    <div class="ai-header">AI Assistant</div>
+    <div id="aiMessages"></div>
+    <input type="text" id="aiInput" placeholder="Ask me something..."
+           onkeypress="if(event.key==='Enter') respondAI()">
+</div>
+
+<script src="js/ai-agent.js"></script>
+
 
 <!-- ================= FOOTER ================= -->
 <footer>
