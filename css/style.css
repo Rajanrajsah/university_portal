@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #f5f7fb;
-    color: #333;
+    background: var(--bg-light);
+    color: var(--text-light);
     line-height: 1.6;
 }
 
@@ -22,8 +22,8 @@ body {
 
 
 nav {
-  background: #003366;
-  color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -382,4 +382,25 @@ input:focus, textarea:focus {
     background: rgba(255,255,255,0.3);
     font-weight: bold;
 }
+
+
+@media (max-width: 768px) {
+    .section {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 
