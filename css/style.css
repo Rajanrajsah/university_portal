@@ -528,7 +528,7 @@ button {
 
 
 * {
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
+  background-color: var(--bg-color) ;
+  color: var(--text-color) ;
 }
 
