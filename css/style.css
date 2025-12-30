@@ -407,34 +407,49 @@ input:focus, textarea:focus {
   --bg-color: #f8fafc;
   --text-color: #111827;
   --card-bg: #ffffff;
-  --primary: #1e40af;
+  --nav-bg: #1e40af;
+  --primary: #2563eb;
+  --border-color: #e5e7eb;
 }
+
 
 body[data-theme="dark"] {
   --bg-color: #0f172a;
   --text-color: #e5e7eb;
   --card-bg: #1e293b;
+  --nav-bg: #020617;
   --primary: #38bdf8;
+  --border-color: #334155;
 }
-
 
 body {
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card, section, nav {
-  background: var(--card-bg);
+nav {
+  background-color: var(--nav-bg);
+}
+
+section, .card, .box, .container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+a {
+  color: var(--primary);
 }
 
 button {
-  background: var(--primary);
+  background-color: var(--primary);
   color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
 }
-
-
-
-
 
 
 
