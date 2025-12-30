@@ -403,6 +403,43 @@ input:focus, textarea:focus {
     }
 }
 
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+  --primary: #1e40af;
+}
+
+body[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --card-bg: #1e293b;
+  --primary: #38bdf8;
+}
+
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card, section, nav {
+  background: var(--card-bg);
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
 #aiAgentBtn {
     position: fixed;
     bottom: 20px;
@@ -446,4 +483,5 @@ input:focus, textarea:focus {
     border-top: 1px solid #ccc;
     padding: 10px;
 }
+
 
