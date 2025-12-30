@@ -451,6 +451,26 @@ button {
   cursor: pointer;
 }
 
+#themeToggle {
+  background: transparent;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+* {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+
+
+
+
 
 
 
