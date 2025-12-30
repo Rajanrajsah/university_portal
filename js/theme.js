@@ -1,25 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("themeToggle");
+
+  // If button not found (page without navbar), safely exit
   if (!toggleBtn) return;
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.body.setAttribute("data-theme", savedTheme);
-    toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
-  }
+  // Apply saved theme on load
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.body.setAttribute("data-theme", savedTheme);
+  toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 
   toggleBtn.addEventListener("click", () => {
-    const currentTheme = document.body.getAttribute("data-theme");
+    const isDark = document.body.getAttribute("data-theme") === "dark";
 
-    if (currentTheme === "dark") {
-      document.body.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-      toggleBtn.textContent = "🌙";
-    } else {
-      document.body.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-      toggleBtn.textContent = "☀️";
-    }
+    document.body.setAttribute("data-theme", isDark ? "light" : "dark");
+    localStorage.setItem("theme", isDark ? "light" : "dark");
+    toggleBtn.textContent = isDark ? "🌙" : "☀️";
   });
 });
